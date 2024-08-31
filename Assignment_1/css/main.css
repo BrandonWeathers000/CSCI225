@@ -18,7 +18,7 @@ a{
 }
 
 /********** NAVBAR ***********/
-.navbar, footer{
+.navbar, marquee{
 	background-color: #3a4b56;  /* gray*/
 
 	text-align: center;
