@@ -82,3 +82,34 @@ a:hover{
 	/* special style */
 	background-color: #00FF00;
 }
+.portfolio .contactInfoSec, .Schedule{}
+	border-right: 3px soild #FFF;
+	border-bottom: 3px soild #FFF;
+}
+
+ h1{
+	 border: 2px soild black;
+	 border-radius: 25px;
+ }
+
+p::first-letter{
+	text-transform: uppercase;
+}
+
+.Portfolio > p{
+	box-shadow: 10px 10px;
+}
+
+tr:nth-child(2n){
+	background-color: gray;
+}
+
+td{
+	border: 1px solid black;
+	vertical-align: top;
+}
+
+tabel{
+	padding: 5px;
+	empty-cells: hide;
+}
