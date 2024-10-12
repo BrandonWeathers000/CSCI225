@@ -68,6 +68,26 @@ h1{
 	text-transform: capitalize;
 	letter-spacing: 2px;
 	text-shadow: 2px 2px 3px red;
+	border: 2px soild black;
+	border-radius: 25px;
+
+	animation: RGB 2s ease-in-out infinite;
+}
+
+@keyframes RGB{
+	0%{color: #FF0000;}
+	33%{color: #00FF00;}
+	66%{color: #0000FF}
+	100%{color: #FF0000;}
+}
+
+@keyframes backgroundSlide{
+	from{background-color: white;}
+	to{background-color: lightblue;}
+}
+
+h1:hover{
+	animation: backgroundSlide 1s forwards;
 }
 
 a{
@@ -82,15 +102,10 @@ a:hover{
 	/* special style */
 	background-color: #00FF00;
 }
-.portfolio .contactInfoSec, .Schedule{}
+.portfolio .contactInfoSec, .Schedule{
 	border-right: 3px soild #FFF;
 	border-bottom: 3px soild #FFF;
 }
-
- h1{
-	 border: 2px soild black;
-	 border-radius: 25px;
- }
 
 p::first-letter{
 	text-transform: uppercase;
@@ -112,4 +127,13 @@ td{
 tabel{
 	padding: 5px;
 	empty-cells: hide;
+}
+
+tr:hover{
+	background-color: white;
+}
+
+th{
+	font-size: 20px;
+	background-color: white;
 }
