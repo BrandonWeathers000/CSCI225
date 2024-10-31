@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>
+			Unit Conversion Calculator - Length
+		</h1>
+
+		<form>
+			<label for="inputOne">
+				Input first number here: 
+			</label>
+
+			<input type="text" id="inputOne">
+
+			<select id="unitOne">
+				<option value="Foot">
+					Foot
+				</option>
+
+				<option value="Meter">
+					Meter
+				</option>
+
+				<option value="Inch">
+					Inch
+				</option>
+			</select>
+			=
+			<label for="inputTwo">
+				Input second number here: 
+			</label>
+
+			<input type="text" id="inputTwo">
+
+			<select id="unitTwo">
+				<option value="Foot">
+					Foot
+				</option>
+
+				<option value="Meter">
+					Meter
+				</option>
+
+				<option value="Inch">
+					Inch
+				</option>
+			</select>
+
+			<button type="button" onClick="unit()" id="convertButton">
+				Convert
+			</button>
+		</form>
+
+		<script>
+			function unit(){
+				let unitOne = document.getElementById("unitOne").value;
+				let inputOne = parseFloat(document.getElementById("inputOne").value);
+
+				let unitTwo = document.getElementById("unitTwo").value;
+
+				console.log("Unit one is: " + unitOne);
+				console.log("Input one is: " + inputOne);
+				console.log("Unit two is: " + unitTwo);
+
+				if(unitOne == "Foot"){
+					if(unitTwo == "Foot"){
+						document.getElementById('inputTwo').value = inputOne;
+					}else if(unitTwo == "Meter"){
+						document.getElementById('inputTwo').value = inputOne/3.28084;
+					}else{
+						document.getElementById('inputTwo').value = inputOne*12;
+					}
+				}else if(unitOne == "Meter"){
+					if(unitTwo == "Foot"){
+						document.getElementById('inputTwo').value = inputOne*3.28084;
+					}else if(unitTwo == "Meter"){
+						document.getElementById('inputTwo').value = inputOne;
+					}else{
+						document.getElementById('inputTwo').value = inputOne*39.37008;
+					}
+				}else{
+					if(unitTwo == "Foot"){
+						document.getElementById('inputTwo').value = inputOne*0.08333333;
+					}else if(unitTwo == "Meter"){
+						document.getElementById('inputTwo').value = inputOne*0.0254;
+					}else{
+						document.getElementById('inputTwo').value = inputOne;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
