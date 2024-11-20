@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #doorOne, #doorTwo, #doorThree{
+        height: 10%;
+        width: 10%;
+    }
+  </style>
+
+  <body>
+    <h1>
+      Welcome tothe Monty Hall Problem
+    </h1>
+
+    <p>
+    You are given the choice of three doors as seen below.
+    </p>
+
+    <img id="doorOne" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fclipart-door-wood-door.png&f=1&nofb=1&ipt=b1109f8fecb14771da3989962dfb69b4e5971a476c0d159091c797d5b34ead89&ipo=images">
+    <img id="doorTwo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fclipart-door-wood-door.png&f=1&nofb=1&ipt=b1109f8fecb14771da3989962dfb69b4e5971a476c0d159091c797d5b34ead89&ipo=images">
+    <img id="doorThree" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fclipart-door-wood-door.png&f=1&nofb=1&ipt=b1109f8fecb14771da3989962dfb69b4e5971a476c0d159091c797d5b34ead89&ipo=images">
+
+    <p>
+      Behind these doors are, in total, 2 goats and 1 car.
+    </p>
+    <p>
+      After choosing one door you will see what lies behind it and must keep it.
+    </p>
+    <p>
+      Please select the door you wish to open.
+    </p>
+
+    <p class="hostBargin">
+      You want to open this door? There is a goat behind this other door. Would you like to switch?
+    </p>
+    <input class="hostBargin" id="switch" value="switch" type="button">
+    <input class="hostBargin" id="stay" value="stay" type="button">
+
+    <p id="win">
+      You won!
+    </p>
+
+    <p id="lose">
+      You lost!
+    </p>
+  </body>
+
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
+    $('.hostBargin').hide();
+    $('#win').hide();
+    $('#lose').hide();
+
+    $(document).ready(function(){
+        $('#doorOne').click(function(){
+          $('.hostBargin').show();
+          $('#doorThree').attr("src", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F006%2F326%2F389%2Foriginal%2Fgoat-cartoon-colored-clipart-illustration-free-vector.jpg&f=1&nofb=1&ipt=e499d63805ae9db7cfadeb4429b4796ee3bd408ef6eb7fff0160f101aa1fa209&ipo=images");
+            $('#switch').click(function(){
+                $('#doorTwo').attr("src", "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fxig%2F6XG%2Fxig6XGKRT.png&f=1&nofb=1&ipt=f123c23c018e5837f7152f8024957af208bfa0c1cdab3875ced7648ea265a02c&ipo=images");
+
+                $('#win').show();
+            });
+
+            $('#stay').click(function(){
+                $('#doorOne').attr("src", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F006%2F326%2F389%2Foriginal%2Fgoat-cartoon-colored-clipart-illustration-free-vector.jpg&f=1&nofb=1&ipt=e499d63805ae9db7cfadeb4429b4796ee3bd408ef6eb7fff0160f101aa1fa209&ipo=images");
+                $('#lose').show();
+            });
+        })
+
+        $('#doorTwo').click(function(){
+          $('.hostBargin').show();
+          $('#doorTwo').attr("src", "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fxig%2F6XG%2Fxig6XGKRT.png&f=1&nofb=1&ipt=f123c23c018e5837f7152f8024957af208bfa0c1cdab3875ced7648ea265a02c&ipo=images");
+          $('#win').show();
+        })
+
+        $('#doorThree').click(function(){
+          $('.hostBargin').show();
+          $('#doorOne').attr("src", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F006%2F326%2F389%2Foriginal%2Fgoat-cartoon-colored-clipart-illustration-free-vector.jpg&f=1&nofb=1&ipt=e499d63805ae9db7cfadeb4429b4796ee3bd408ef6eb7fff0160f101aa1fa209&ipo=images");
+            $('#switch').click(function(){
+                $('#doorTwo').attr("src", "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fxig%2F6XG%2Fxig6XGKRT.png&f=1&nofb=1&ipt=f123c23c018e5837f7152f8024957af208bfa0c1cdab3875ced7648ea265a02c&ipo=images");
+
+                $('#win').show();
+            });
+
+            $('#stay').click(function(){
+                $('#doorThree').attr("src", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F006%2F326%2F389%2Foriginal%2Fgoat-cartoon-colored-clipart-illustration-free-vector.jpg&f=1&nofb=1&ipt=e499d63805ae9db7cfadeb4429b4796ee3bd408ef6eb7fff0160f101aa1fa209&ipo=images");
+                $('#lose').show();
+            });
+        })
+    })
+  </script>
+</html>
